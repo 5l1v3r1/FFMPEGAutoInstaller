@@ -11,6 +11,15 @@
 
 <br /><br />
 <p class="code">
+yum update -y
+yum install wget -y
+wget --no-check-certificate "https://raw.githubusercontent.com/ShekharSumanPro/FFMPEGAutoInstaller/master/install-ffmpeg.sh" -O /root/install-ffmpeg.sh
+cd /root
+chmod +x install-ffmpeg.sh
+./install-ffmpeg.sh  
+  
+  
+<br /><br /> 
 wget https://github.com/ShekharSumanPro/FFMPEGAutoInstaller/blob/master/ffmpeg.Shekhar<br />
 sh ./ffmpeg.Shekhar
 </p>
