@@ -11,7 +11,7 @@
 
 <br /><br />
 <p class="code">
-wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg.yeskullu<br />
+wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg.Shekhar<br />
 sh ./ffmpeg.yeskullu
 </p>
 <br /><br />
