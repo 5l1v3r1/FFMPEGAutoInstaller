@@ -1,0 +1,59 @@
+#!/bin/bash
+# FFMPEG AUTO INSTALLER FOR UNIX BY Shekhar Suman
+# COMPATIBLE WITH CENTOS6.5 WITH PHP5.4
+
+echo "You Are Going to Install FFMpeg, FFMpeg-PHP, Mencoder & Mplayer"
+
+while true; do
+    read -p "Are you sure you want to continue, type yes or no ?" yn
+    case $yn in
+        [Yy]* ) 
+echo "1) Creating Repository File & Importing Public Key."
+echo '[dag]
+name=Dag RPM Repository for Red Hat Enterprise Linux
+baseurl=http://apt.sw.be/redhat/el$releasever/en/$basearch/dag
+gpgcheck=1
+enabled=1' > /etc/yum.repos.d/dag.repo
+rpm -Uhv http://apt.sw.be/redhat/el5/en/i386/rpmforge/RPMS/rpmforge-release-0.3.6-1.el5.rf.i386.rpm
+echo "Done......."
+echo "2) Installing ffmpeg & ffmpeg-devel."
+yum install ffmpeg ffmpeg-devel -y
+echo "Done......."
+echo "3) Downloading ffmpeg-php package modded by YesKullu."
+if rpm -q php54; then
+wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg-php-0.6-php54.zip
+unzip ffmpeg-php-0.6-php54.zip
+else
+wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg-php-0.6.zip
+unzip ffmpeg-php-0.6.zip
+fi
+cd ffmpeg-php-0.6.0
+echo "Done......."
+echo "4) Installing ffmpeg-php extension."
+if rpm -q php54; then
+yum install php54-devel -y
+elif rpm -q php53; then
+yum install php53-devel -y
+elif rpm -q php53u; then
+yum install php53u-devel -y
+elif rpm -q php52; then
+yum install php52-devel -y
+elif rpm -q php; then
+yum install php-devel -y
+fi
+phpize
+./configure
+make
+make install
+echo "Done........"
+echo "5) Installing mplayer and mencoder"
+yum install mplayer mencoder -y
+/etc/init.d/httpd restart
+echo "Done........"
+echo "FFMpeg installation completed.. Thanks for using YesKullu FFMpeg Auto Installer. :)"
+ break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
