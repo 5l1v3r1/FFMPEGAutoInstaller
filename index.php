@@ -6,13 +6,13 @@
 .code{font-family:courier;color:#999;border:1px solid #555;padding:10px;margin:10px;}
 </style>
 <body>
-<h1>FFMPEG Auto Installer By YesKullu</h1>
+<h1>FFMPEG Auto Installer By Shekhar Suman</h1>
 <p>To install ffmpeg at your server please run below command..</p>
 
 <br /><br />
 <p class="code">
-wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg.Shekhar<br />
-sh ./ffmpeg.yeskullu
+wget https://github.com/ShekharSumanPro/FFMPEGAutoInstaller/blob/master/ffmpeg.Shekhar<br />
+sh ./ffmpeg.shekhar
 </p>
 <br /><br />
 Enjoy !!!
