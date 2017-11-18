@@ -12,7 +12,7 @@
 <br /><br />
 <p class="code">
 wget https://github.com/ShekharSumanPro/FFMPEGAutoInstaller/blob/master/ffmpeg.Shekhar<br />
-sh ./ffmpeg.shekhar
+sh ./ffmpeg.Shekhar
 </p>
 <br /><br />
 Enjoy !!!
