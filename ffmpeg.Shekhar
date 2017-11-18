@@ -19,12 +19,12 @@ echo "Done......."
 echo "2) Installing ffmpeg & ffmpeg-devel."
 yum install ffmpeg ffmpeg-devel -y
 echo "Done......."
-echo "3) Downloading ffmpeg-php package modded by YesKullu."
+echo "3) Downloading ffmpeg-php package modded by Shekhar Suman."
 if rpm -q php54; then
-wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg-php-0.6-php54.zip
+wget https://raw.githubusercontent.com/ShekharSumanPro/FFMPEGAutoInstaller/master/ffmpeg-php-0.6-php54.zip
 unzip ffmpeg-php-0.6-php54.zip
 else
-wget http://apps.yeskullu.com/library/ffmpeg/ffmpeg-php-0.6.zip
+wget https://raw.githubusercontent.com/ShekharSumanPro/FFMPEGAutoInstaller/master/ffmpeg-php-0.6.zip
 unzip ffmpeg-php-0.6.zip
 fi
 cd ffmpeg-php-0.6.0
@@ -50,10 +50,9 @@ echo "5) Installing mplayer and mencoder"
 yum install mplayer mencoder -y
 /etc/init.d/httpd restart
 echo "Done........"
-echo "FFMpeg installation completed.. Thanks for using YesKullu FFMpeg Auto Installer. :)"
+echo "FFMpeg installation completed.. Thanks for using Shekhar Suman FFMpeg Auto Installer. :)"
  break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
-
